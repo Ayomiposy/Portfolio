@@ -220,7 +220,7 @@ footer svg {
 
 }
 
-@media (max-width: 375px) {
+@media (max-width: 380px) {
     .static {
         width: 100vw;
         top: -25px;
