@@ -1,0 +1,317 @@
+/* Added styling for nav section */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans Display", sans-serif;
+}
+
+.static {
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+    top: 2px;
+}
+
+nav {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: rgba(232, 229, 228, .7);
+    backdrop-filter: blur(16px);
+    border-radius: 5rem;
+}
+
+.nav-container .nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav .nav-item .nav-link {
+    color: #000000 !important;
+    font-weight: 600;
+}
+
+.nav .nav-item .active {
+    color: #000000 !important;
+    background-color: white !important;
+    border-radius: 500px;
+    margin-right: 3px;
+}
+
+.nav .nav-item .resume {
+    margin-left: 10px;
+    background-color: #0000ee !important;
+    color: white !important;
+}
+
+.brand-logo {
+    width: 3rem;
+    cursor: pointer;
+}
+
+/* Added styling for hero heading */
+.hero-heading {
+    width: 50rem !important;
+    font-size: 3rem !important;
+    font-weight: 550 !important;
+    text-align: center;
+    margin: 300px 0;
+    animation-name: slideup;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+}
+
+.emoji-img {
+    width: 4rem;
+}
+
+/* Added profile picture styling */
+
+.profile-picture {
+    display: flex;
+    gap: 2rem;
+}
+
+.profile-picture .picture{
+    width: 50%;
+}
+
+.profile-picture .picture img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.profile-picture .picture .picture-2 {
+    height: 100%;
+    width: 100%;
+    animation-name: slideup;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+}
+
+.profile-picture .picture .picture-1 {
+    height: 100%;
+    width: 100%;
+    animation-name: slideup;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+}
+
+/* Added about section styling */
+
+.about, .leadership, .my-tech-stack {
+    margin: 200px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about p, .leadership p {
+    max-width: 80%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-spacing-trim: normal;
+}
+
+.about .active, .leadership .active, .my-tech-stack .active {
+    color: #000000 !important;
+    background-color:  rgba(232, 229, 228, .7) !important;
+    border-radius: 500px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* Added My tech stack and Education section styling */
+
+.tech-stack {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.tech-stack p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(95, 91, 91, 0.705);
+}
+
+.tech-stack img {
+    width: 5rem;
+}
+
+.tools {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.tool-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.tool-items h3 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.tool-items .active {
+    font-size: 14px;
+    color: rgb(95, 91, 91);
+    font-weight: 500;
+}
+
+/* Added footer styling */
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw !important;
+}
+
+footer img {
+    width: 25px;
+}
+
+.branding {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.branding .posi-logo {
+    width: 40px;
+}
+
+.spin-emoji {
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+
+@media (max-width: 739px) {
+    .tech-stack {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .profile-picture {
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .profile-picture .picture{
+        width: 100%;
+    }
+}
+
+@media (max-width: 557px) {
+    .hero-heading {
+        width: 100% !important;
+    }
+
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center ;
+        gap: 15px;
+    }
+
+    .footer-nav .nav-item .nav-link svg {
+        width: 20px;
+    }
+}
+
+
+@media (max-width: 372px) {
+    .static {
+        position: fixed;
+        width: 100vw;
+        top: -25px;
+    }
+
+    .nav-container .nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .nav-container .nav .nav-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav {
+        display: block;
+    }
+
+    header {
+        border-radius: 0%;
+    }
+}
+
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideright {
+    from {
+        transform: translateX(300px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slideleft {
+    from {
+        transform: translateX(-300px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slideup {
+    from {
+        transform: translateY(100px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+

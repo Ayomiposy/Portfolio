@@ -1,0 +1,245 @@
+/* Added styling for nav section */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans Display", sans-serif;
+    /* overflow-x: hidden; */
+}
+
+.static {
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+    top: 2px;
+}
+
+nav {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: rgba(232, 229, 228, .7);
+    backdrop-filter: blur(16px);
+    border-radius: 5rem;
+}
+
+.nav-container .nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav .nav-item .nav-link {
+    color: #000000 !important;
+    font-weight: 600;
+}
+
+.nav .nav-item .active {
+    color: #000000 !important;
+    background-color: white !important;
+    border-radius: 500px;
+    margin-right: 3px;
+}
+
+.nav .nav-item .resume {
+    margin-left: 10px;
+    background-color: #0000ee !important;
+    color: white !important;
+}
+
+.brand-logo {
+    width: 3rem;
+    cursor: pointer;
+}
+
+
+/* Added styling for hero heading */
+.hero-heading {
+    width: 50rem !important;
+    font-size: 2rem !important;
+    font-weight: 550 !important;
+    text-align: center;
+    margin: 150px 0;
+    animation-name: slideup;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+}
+
+.hero-heading span {
+    font-size: 17px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Added My tech stack and Education section styling */
+
+.work-stack {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 10px;
+    width: 100%;
+    animation-name: slideup;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: s;
+}
+
+.work-stack p {
+    font-size: 17px;
+    font-weight: 400;
+    color:#000000;
+    text-align: justify;
+    line-height: 1.7em;
+}
+
+.work-stack img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 5px 6px;
+}
+
+.work-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: start;
+    padding: 2rem;
+    text-align: left;
+}
+
+.work-items .tools {
+    display: flex;
+    gap: 20px;
+}
+
+.work-items  button a {
+    text-decoration: none;
+    color: white;
+}
+
+.work-items  button {
+    padding: 5px 30px;
+    border-radius: 5px;
+    background-color:#1a1a81b7;
+    font-weight: 500;
+    align-self: flex-start;
+}
+
+.work-items  button:hover {
+    background-color:#1a1a81;
+}
+
+.work-items h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.work-items .active {
+    font-size: 14px;
+    color: rgb(95, 91, 91);
+    font-weight: 500;
+}
+
+/* Added footer styling */
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw !important;
+}
+
+footer img {
+    width: 25px;
+}
+
+.branding {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.branding .posi-logo {
+    width: 40px;
+}
+
+.spin-emoji {
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+
+@media (max-width: 770px) {
+    .work-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .hero-heading {
+        width: 100% !important;
+    }
+
+}
+
+@media (min-width: 770px) and (max-width: 1206px) {
+    .work-stack {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        gap: 10px;
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 557px) {
+    .hero-heading {
+        width: 100% !important;
+    }
+
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center ;
+        gap: 15px;
+    }
+
+    .footer-nav .nav-item .nav-link svg {
+        width: 20px;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideup {
+    from {
+        transform: translateY(100px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}

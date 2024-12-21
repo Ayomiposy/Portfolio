@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans Display", sans-serif;
+}
+
+
+.static {
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+    top: 2px;
+}
+
+nav {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(232, 229, 228, .7);
+    backdrop-filter: blur(30px);
+    border-radius: 5rem;
+}
+
+.nav-container .nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav .nav-item .nav-link {
+    color: #000000 !important;
+    font-weight: 600;
+}
+
+.nav .nav-item .active {
+    color: #000000 !important;
+    background-color: white !important;
+    border-radius: 500px;
+}
+
+.nav .nav-item .resume {
+    margin-left: 10px;
+    background-color: #0000ee !important;
+    color: white !important;
+}
+
+.brand-logo {
+    width: 3rem;
+    cursor: pointer;
+}
+
+
+.contact-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 85vh;
+    animation-name: slideup;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    color: #000000;
+    font-weight: 600;
+}
+
+.contact-section a {
+    text-decoration: none;
+}
+
+.contact-section span {
+    color: #867d7d;
+    cursor: pointer;
+}
+
+
+/* Added footer styling */
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw !important;
+}
+
+footer img {
+    width: 25px;
+}
+
+.branding {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.branding .posi-logo {
+    width: 40px;
+}
+
+.spin-emoji {
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+@media (max-width: 557px) {
+    .hero-heading {
+        width: 100% !important;
+    }
+
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center ;
+        gap: 15px;
+    }
+
+    .footer-nav .nav-item .nav-link svg {
+        width: 20px;
+    }
+
+    .contact-section {
+        padding-top: 200px;
+    }
+}
+
+@media (max-width: 372px) {
+    .static {
+        position: fixed;
+        width: 100vw;
+        top: -25px;
+    }
+
+    .nav-container .nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .nav-container .nav .nav-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav {
+        display: block;
+    }
+
+    header {
+        border-radius: 0%;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideup {
+    from {
+        transform: translateY(100px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}

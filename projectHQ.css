@@ -1,0 +1,284 @@
+/* Added styling for nav section */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans Display", sans-serif;
+}
+
+.static {
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+    top: 20px;
+}
+
+nav {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(232, 229, 228, .7);
+    backdrop-filter: blur(16px);
+    border-radius: 5rem;
+}
+
+.nav-container .nav {
+    display: flex;
+    gap: px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav .nav-item .nav-link {
+    color: #000000 !important;
+    font-weight: 600;
+}
+
+.nav .nav-item .active {
+    color: #000000 !important;
+    background-color: white !important;
+    border-radius: 500px;
+    margin-right: 3px;
+}
+
+.nav .nav-item .resume {
+    margin-left: 10px;
+    background-color: #0000ee !important;
+    color: white !important;
+}
+
+.brand-logo {
+    width: 3rem;
+    cursor: pointer;
+}
+
+/* Added section styling */
+
+.project-section {
+    height: 100vh;
+    margin-top: 10rem;
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    top: -160px; 
+}
+
+
+.section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.section p {
+    font-size: 20px;
+}
+
+.section1 {
+    animation-name: slideleft;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+}
+
+.section1 a {
+    text-decoration: none;
+}
+
+.section1 button {
+    padding: 10px;
+    font-size: 15px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.section1 button a:hover {
+    color: white;
+}
+
+.section1 button:hover, .section2 button:hover {
+    cursor: pointer;
+    background-color:#0000ee;
+    color: white;
+    font-size: 15px;
+    transition: background-color 1s;
+}
+
+.section2 {
+    background: #0000ee;
+    animation-name: slideright;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+}
+
+.section2 a {
+    text-decoration: none;
+    color: white;
+}
+
+.section2 button {
+    padding: 10px;
+    font: 15px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+}
+
+
+/* Added footer styling */
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw !important;
+    position: fixed;
+    top: 85%;
+}
+
+footer img {
+    width: 25px;
+}
+
+footer svg {
+    color: white;
+}
+
+.branding {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.branding .posi-logo {
+    width: 40px;
+}
+
+.spin-emoji {
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+@media (max-width: 557px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center ;
+        gap: 15px;
+        position: relative;
+        background-color: #0000ee;
+        margin-top: 0;
+        animation-name: slideright;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-delay: 0s;
+    }
+
+    .footer-nav .nav-item .nav-link svg {
+        width: 20px;
+    }
+
+    .project-section {
+        display: flex;
+        flex-direction: column;
+        height: 100vh !important;
+        width: 100vw !important;
+        position: relative !important;
+        top: 50px;
+    }
+
+
+}
+
+@media (max-width: 739px) {
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .static {
+        width: 100vw;
+        top: -25px;
+    }
+
+    .project-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-container .nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .nav-container .nav .nav-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav {
+        display: block;
+    }
+
+    header {
+        border-radius: 0%;
+    }
+}
+
+@keyframes slideright {
+    from {
+        transform: translateX(300px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slideleft {
+    from {
+        transform: translateX(-300px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
