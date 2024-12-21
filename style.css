@@ -299,7 +299,9 @@ footer img {
         width: 20px;
     }
 
-
+    .hero {
+        margin-top: 150px !important;
+    }
 
     footer {
         display: flex;
